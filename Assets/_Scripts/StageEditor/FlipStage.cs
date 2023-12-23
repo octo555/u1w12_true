@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FlipStage : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class FlipStage : MonoBehaviour
 
     private bool isFlipHorizontal = false;
     private bool isFlipVertical = false;
+
+    public UnityEvent gravityResetEvent;
 
     Vector3 flipYRotaion = new Vector3(0, 0, -180);
     Vector3 flipYPosition = new Vector3(4.8f, -0.65f, -10);
@@ -55,6 +58,8 @@ public class FlipStage : MonoBehaviour
             // 再帰的に子オブジェクトの子も調整
             FlipY(child);
         }
+
+        gravityResetEvent.Invoke();
     }
     public void FlipHorizontal()
     {

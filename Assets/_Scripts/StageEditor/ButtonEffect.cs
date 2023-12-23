@@ -34,7 +34,8 @@ public class ButtonEffect : MonoBehaviour
         if (isMainMenuButton)
         {
             svgImage = GetComponent<SVGImage>();
-            iconSize = iconTransform.localScale;
+            if(iconTransform != null)
+                iconSize = iconTransform.localScale;
         }
     }
 
@@ -43,7 +44,8 @@ public class ButtonEffect : MonoBehaviour
         if (isSubMenuButton)
         {
             svgImage = GetComponent<SVGImage>();
-            iconSize = iconTransform.localScale;
+            if (iconTransform != null)
+                iconSize = iconTransform.localScale;
             altIconSize = altIcon.localScale;
         }
     }
@@ -54,12 +56,14 @@ public class ButtonEffect : MonoBehaviour
     {
         if (orChangeItToText)
         {
-            iconTransform.gameObject.SetActive(false);
+            if(iconTransform != null)
+                iconTransform.gameObject.SetActive(false);
             altText.SetActive(true);
         }
         if (orChangeItToAltIcon)
         {
-            iconTransform.gameObject.SetActive(false);
+            if (iconTransform != null)
+                iconTransform.gameObject.SetActive(false);
             altIcon.gameObject.SetActive(true);
         }
         svgImage.color = whiteColor;
@@ -71,12 +75,14 @@ public class ButtonEffect : MonoBehaviour
     {
         if (orChangeItToText)
         {
-            iconTransform.gameObject.SetActive(true);
+            if (iconTransform != null)
+                iconTransform.gameObject.SetActive(true);
             altText.SetActive(false);
         }
         if (orChangeItToAltIcon)
         {
-            iconTransform.gameObject.SetActive(true);
+            if (iconTransform != null)
+                iconTransform.gameObject.SetActive(true);
             altIcon.gameObject.SetActive(false);
         }
         svgImage.color = nomalColor;
@@ -88,7 +94,8 @@ public class ButtonEffect : MonoBehaviour
         onButtonClick.Invoke();
         preColor = svgImage.color;
         svgImage.color = pressedColor;
-        iconTransform.DOScale(new Vector2(iconSize.x * 0.9f, iconSize.y * 0.9f), 0);
+        if (iconTransform != null)
+            iconTransform.DOScale(new Vector2(iconSize.x * 0.9f, iconSize.y * 0.9f), 0);
         if(orChangeItToAltIcon)
             altIcon.transform.DOScale(new Vector2(iconSize.x * 0.9f, iconSize.y * 0.9f), 0);
 
@@ -101,7 +108,8 @@ public class ButtonEffect : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         svgImage.color = preColor;
-        iconTransform.DOScale(new Vector2(iconSize.x, iconSize.y), 0);
+        if (iconTransform != null)
+            iconTransform.DOScale(new Vector2(iconSize.x, iconSize.y), 0);
         if (orChangeItToAltIcon)
             altIcon.transform.DOScale(new Vector2(altIconSize.x, altIconSize.y), 0);
     }
