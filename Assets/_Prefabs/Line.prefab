@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1033456418541339479}
   - component: {fileID: 4337751056374706762}
   - component: {fileID: 5023335523934785873}
+  - component: {fileID: -7810198452107215353}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -204,3 +205,16 @@ MonoBehaviour:
   rigidBody: {fileID: 1033456418541339479}
   points: []
   pointsCount: 0
+--- !u!114 &-7810198452107215353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930561925750267817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5dbdbdebd00d0459bb92604538efa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torqueForce: 0
