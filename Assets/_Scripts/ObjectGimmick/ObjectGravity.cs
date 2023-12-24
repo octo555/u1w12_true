@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectGravity : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
+    [HideInInspector] public Vector2 preVelocity = Vector2.zero;
 
     private FlipStage flipStage;
 

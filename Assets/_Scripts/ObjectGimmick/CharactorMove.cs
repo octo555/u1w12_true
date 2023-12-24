@@ -11,14 +11,17 @@ public class CharactorMove : MonoBehaviour
 
     private void Update()
     {
-        if (orUseFlightGravity)
+        if (StopTime.instance.isPaused == false)
         {
-            rb.velocity = new Vector2(speedX, 0);
-            transform.Translate(Vector2.down * flightSpeed * Time.deltaTime);
-        }
-        else
-        {
-            rb.velocity = new Vector2(speedX, rb.velocity.y);
+            if (orUseFlightGravity)
+            {
+                rb.velocity = new Vector2(speedX, 0);
+                transform.Translate(Vector2.down * flightSpeed * Time.deltaTime);
+            }
+            else
+            {
+                rb.velocity = new Vector2(speedX, rb.velocity.y);
+            }
         }
     }
 }

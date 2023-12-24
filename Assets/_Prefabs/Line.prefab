@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4337751056374706762}
   - component: {fileID: 5023335523934785873}
   - component: {fileID: -7810198452107215353}
+  - component: {fileID: 116642838562181793}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -218,3 +219,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torqueForce: 0
+--- !u!114 &116642838562181793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930561925750267817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962a37f9697771f4498507dc7131da40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1033456418541339479}
+  preVelocity: {x: 0, y: 0}

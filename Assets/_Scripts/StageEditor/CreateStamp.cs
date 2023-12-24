@@ -37,6 +37,14 @@ public class CreateStamp : MonoBehaviour
         {
             var go = Instantiate(currentObject, new Vector3(c.x, c.y, 0), Quaternion.identity);
             go.transform.parent = objects;
+            if (transform.GetComponent<StopTime>().isPaused)
+            {
+                if (go.GetComponent<Rigidbody2D>())
+                {
+                    go.GetComponent<Rigidbody2D>().isKinematic = true;
+                    go.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                }
+            }
 
             if (currentObject == stamps[1])
                 ConnectBallon(go);

@@ -24,9 +24,9 @@ public class BGMManager : MonoBehaviour
 
         if (index == 0)
             audioSource.time = 13.65f;
-        if (index == 2)
+        if (index == 1)
             audioSource.time = 36.5f;
-        if(index == 1) 
+        if(index == 2) 
             audioSource.time = 0.5f;
     }
 }

@@ -78,6 +78,12 @@ public class LineDrawer : MonoBehaviour
                 //Activate Physics on the line
                 currentLine.UsePhysics(true);
 
+                if (StopTime.instance.isPaused)
+                {
+                    currentLine.GetComponent<Rigidbody2D>().isKinematic = true;
+                    currentLine.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                }
+
                 currentLine = null;
             }
         }

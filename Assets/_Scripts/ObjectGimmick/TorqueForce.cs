@@ -14,7 +14,8 @@ public class TorqueForce : MonoBehaviour
 
     private void Update()
     {
-        rb.AddTorque(torqueForce * Time.deltaTime);
+        if(torqueForce != 0 && StopTime.instance.isPaused == false)
+        rb.MoveRotation(rb.rotation + torqueForce * Time.fixedDeltaTime);
     }
 
     public void DiableColliderTempraly()

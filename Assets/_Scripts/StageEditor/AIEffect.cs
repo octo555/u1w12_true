@@ -18,6 +18,8 @@ public class AIEffect : MonoBehaviour
 
             if (go != null)
             {
+                SEManager.instance.PlaySE(1);
+
                 switch (AIModeNumber)
                 {
                     case 0:
@@ -27,13 +29,13 @@ public class AIEffect : MonoBehaviour
                         ToSmall(go);
                         break;
                     case 2:
-                        //ToTorque(go);
+                        ToTorque(go);
                         break;
                     case 3:
-                        Debug.Log("High score");
+                        PinClip(go);
                         break;
                     case 4:
-                        Debug.Log("High score");
+                        
                         break;
 
                 }
@@ -62,12 +64,17 @@ public class AIEffect : MonoBehaviour
 
     private void ToTorque(GameObject g)
     {
-        g.GetComponent<TorqueForce>().torqueForce += tForce;
+        g.GetComponent<TorqueForce>().torqueForce -= tForce;
     }
 
     private void PinClip(GameObject g)
     {
-        //g.GetComponent<Rigidbody2D>().constraints
+        g.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+    }
+
+    private void EraseObject(GameObject g)
+    {
+        Destroy(g);
     }
 
 
