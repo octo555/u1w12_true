@@ -6,7 +6,7 @@ public class ObjectGravity : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
     [HideInInspector] public Vector2 preVelocity = Vector2.zero;
-
+    [HideInInspector] public float preAngular = 0;
     private FlipStage flipStage;
 
     private void OnEnable()

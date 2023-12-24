@@ -6,7 +6,8 @@ using UnityEngine.SocialPlatforms.Impl;
 public class AIEffect : MonoBehaviour
 {
     public float tForce;
-    private int AIModeNumber = -1;
+    public int AIModeNumber = -1;
+
 
 
     private void Update()
@@ -35,7 +36,7 @@ public class AIEffect : MonoBehaviour
                         PinClip(go);
                         break;
                     case 4:
-                        
+                        EraseObject(go);
                         break;
 
                 }

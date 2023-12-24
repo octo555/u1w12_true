@@ -7,6 +7,7 @@ public class ResetEdit : MonoBehaviour
 {
     public void ResetStage()
     {
+        ButtonManager.instance.ResetCursor();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

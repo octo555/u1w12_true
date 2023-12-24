@@ -9,6 +9,9 @@ using Unity.VisualScripting;
 
 public class ButtonEffect : MonoBehaviour
 {
+
+    public bool isChangeBGMButton = false;
+    public int bgmIndex;
     [SerializeField] bool isMainMenuButton;
     [SerializeField] bool isSubMenuButton;
     [SerializeField] bool orChangeItToText;
@@ -91,7 +94,11 @@ public class ButtonEffect : MonoBehaviour
     //âüÇ≥ÇÍÇΩ
     void OnMouseDown()
     {
+        ButtonManager.instance.ResetAIEffectNumber();
+        ButtonManager.instance.ResetCursor();
         onButtonClick.Invoke();
+
+        if (isChangeBGMButton) StageSound.instance.ChangeBGMClip(bgmIndex); //Ç‚Ç¡Ç¬ÇØBGMïœçX
         preColor = svgImage.color;
         svgImage.color = pressedColor;
         if (iconTransform != null)

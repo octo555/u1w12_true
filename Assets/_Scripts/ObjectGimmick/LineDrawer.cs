@@ -25,14 +25,17 @@ public class LineDrawer : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            BeginDraw();
+        if (DrawOnOff.instance.canDraw)
+        {
+            if (Input.GetMouseButtonDown(0))
+                BeginDraw();
 
-        if (currentLine != null)
-            Draw();
+            if (currentLine != null)
+                Draw();
 
-        if (Input.GetMouseButtonUp(0))
-            EndDraw();
+            if (Input.GetMouseButtonUp(0))
+                EndDraw();
+        }
     }
 
     // Begin Draw ----------------------------------------------

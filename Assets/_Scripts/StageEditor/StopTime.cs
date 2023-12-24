@@ -48,12 +48,15 @@ public class StopTime : MonoBehaviour
                 {  
                     child.GetComponent<ObjectGravity>().preVelocity = childRb2d.velocity;
                     childRb2d.velocity = Vector2.zero;
+                    child.GetComponent<ObjectGravity>().preAngular = childRb2d.angularVelocity;
+                    childRb2d.angularVelocity = 0;
                     childRb2d.isKinematic = true;
                 }
                 else
                 {
                     
                     childRb2d.velocity = child.GetComponent<ObjectGravity>().preVelocity;
+                    childRb2d.angularVelocity = child.GetComponent<ObjectGravity>().preAngular;
                     childRb2d.isKinematic = false;
                 }
             }
