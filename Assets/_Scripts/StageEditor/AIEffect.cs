@@ -82,7 +82,10 @@ public class AIEffect : MonoBehaviour
     private GameObject SearchRBObject()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+        float rayRadius = 0.5f;  // ‰~óRay‚Ì”¼Œa
+
+        // CircleCast‚Å‰~ó‚ÌRay‚ğ”ò‚Î‚·
+        RaycastHit2D hit = Physics2D.CircleCast(ray.origin, rayRadius, ray.direction);
 
         // Ray‚ª‰½‚©‚É“–‚½‚Á‚½‚©Šm”F
         if (hit.collider != null)
