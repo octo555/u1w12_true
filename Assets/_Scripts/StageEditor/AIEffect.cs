@@ -8,13 +8,23 @@ public class AIEffect : MonoBehaviour
     public float tForce;
     public int AIModeNumber = -1;
 
+    public static AIEffect instance;
+    public bool canDraw = true;
+    GameObject go = null;
 
+    private void Awake()
+    {
+        if(instance == null)
+        instance = this;
+    }
 
     private void Update()
     {
         if(AIModeNumber != -1 && Input.GetMouseButtonDown(0))
         {
-            GameObject go = null;
+            canDraw = false;
+
+            
             go = SearchRBObject();
 
             if (go != null)
@@ -41,6 +51,9 @@ public class AIEffect : MonoBehaviour
 
                 }
             }
+
+            go = null;
+            canDraw = true;
         }
     }
 
@@ -65,7 +78,8 @@ public class AIEffect : MonoBehaviour
 
     private void ToTorque(GameObject g)
     {
-        g.GetComponent<TorqueForce>().torqueForce -= tForce;
+        g.GetComponent<TorqueForce>().rotationPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        g.GetComponent<TorqueForce>().torqueForce += tForce;
     }
 
     private void PinClip(GameObject g)

@@ -161,7 +161,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: bead36701be520440a26f2ccf64f4f43, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torqueForce: 0
+  rotationPoint: {x: 0, y: 0}
 --- !u!114 &116642838562181793
 MonoBehaviour:
   m_ObjectHideFlags: 0

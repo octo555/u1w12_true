@@ -20,6 +20,7 @@ public class CharactorMove : MonoBehaviour
             }
             else
             {
+                if(speedX != 0)
                 rb.velocity = new Vector2(speedX, rb.velocity.y);
             }
         }
