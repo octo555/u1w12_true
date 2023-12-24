@@ -52,8 +52,7 @@ public class ConnectObjectsInRadiusOnClick : MonoBehaviour
                         if (op != null && rb.gameObject != op.gameObject)
                         {
                             // SpringJoint2DÇí«â¡
-                            SpringJoint2D springJoint = collider.gameObject.AddComponent<SpringJoint2D>();
-
+                            FixedJoint2D springJoint = collider.gameObject.AddComponent<FixedJoint2D>();
 
                             // SpringJoint2DÇÃê›íË
                             //springJoint.connectedAnchor = Vector2.zero;
@@ -62,7 +61,6 @@ public class ConnectObjectsInRadiusOnClick : MonoBehaviour
                             //springJoint.autoConfigureDistance = false;
                             springJoint.enableCollision = true;
                             SEManager.instance.PlaySE(1);
-                            rb.gameObject.GetComponent<JointRenderer>().opp = op.transform;
                         }
                         
                         op = rb;
