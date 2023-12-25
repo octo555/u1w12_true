@@ -179,7 +179,7 @@ namespace MG_PhysicsDraw2D
 
         public void FinishDrawing()
         {
-            rigidbody2.constraints = RigidbodyConstraints2D.None;
+            //rigidbody2.constraints = RigidbodyConstraints2D.None;
             if (!fixedPosition)
             {
                 rigidbody2.bodyType = RigidbodyType2D.Dynamic;
