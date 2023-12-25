@@ -6,7 +6,8 @@ using Collider2DOptimization;
 namespace MG_PhysicsDraw2D
 {
     public class PD2_Drawing : MonoBehaviour
-    {
+    { 
+
         [HideInInspector] public LineRenderer lineRenderer;
         [HideInInspector] public Rigidbody2D rigidbody2;
         [HideInInspector] public PolygonCollider2D polygonCollider;

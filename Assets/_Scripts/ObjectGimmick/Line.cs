@@ -7,6 +7,7 @@ public class Line : MonoBehaviour
     public LineRenderer lineRenderer;
     public EdgeCollider2D edgeCollider;
     public Rigidbody2D rigidBody;
+    private List<CircleCollider2D> cols = new List<CircleCollider2D>();
 
     [HideInInspector] public List<Vector2> points = new List<Vector2>();
     [HideInInspector] public int pointsCount = 0;
@@ -30,6 +31,8 @@ public class Line : MonoBehaviour
         CircleCollider2D circleCollider = this.gameObject.AddComponent<CircleCollider2D>();
         circleCollider.offset = newPoint;
         circleCollider.radius = circleColliderRadius;
+        circleCollider.isTrigger = true;
+        cols.Add(circleCollider); ;
 
         //Line Renderer
         lineRenderer.positionCount = pointsCount;
@@ -50,6 +53,10 @@ public class Line : MonoBehaviour
     {
         // isKinematic = true  means that this rigidbody is not affected by Unity's physics engine
         rigidBody.isKinematic = !usePhysics;
+        foreach (var col in cols)
+        {
+            col.isTrigger = false;
+        }
     }
 
     public void SetLineColor(Gradient colorGradient)

@@ -14,6 +14,8 @@ public class StopTime : MonoBehaviour
     {
         if(instance == null)
             instance = this;
+
+        TogglePause();
     }
 
     private void Update()
