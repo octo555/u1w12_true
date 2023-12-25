@@ -53,35 +53,48 @@ namespace MG_PhysicsDraw2D
 
         bool _firstClick = true;
 
+        public float drawInterval;
+        private float drawTimer;
+
         void Awake()
         {
             Transform = transform;
             pointer = GetComponentInChildren<PD2_Pointer>();
             Transform.position = Vector3.zero;
+            drawTimer = drawInterval;
         }
 
         void Update()
         {
+            drawTimer += Time.deltaTime;
+
             eventManager.TriggerEvent(PD2Event.OnUpdate);
 
-            float distanceMoved = Vector3.Distance(Input.mousePosition, lastMousePosition );
+            float distanceMoved = Vector3.Distance(Input.mousePosition, lastMousePosition);
 
-            if (Input.GetMouseButtonDown(0) && !currentDrawing && distanceMoved >= distanceMovedThreshold)
-            {
-                OnPointerDown();
-                eventManager.TriggerEvent(PD2Event.OnPointerDown);
-            }
 
-            if (Input.GetMouseButton(0))
+            if (drawTimer > drawInterval)
             {
-                OnPointer();
-                eventManager.TriggerEvent(PD2Event.OnPointer);
-            }
+                if (Input.GetMouseButtonDown(0) && !currentDrawing && distanceMoved >= distanceMovedThreshold)
+                {
+                    OnPointerDown();
+                    eventManager.TriggerEvent(PD2Event.OnPointerDown);
+                    
+                }
 
-            if (Input.GetMouseButtonUp(0))
-            {
-                OnPointerUp();
-                eventManager.TriggerEvent(PD2Event.OnPointerUp);
+                if (Input.GetMouseButton(0))
+                {
+                    OnPointer();
+                    eventManager.TriggerEvent(PD2Event.OnPointer);
+                }
+
+                if (Input.GetMouseButtonUp(0))
+                {
+                    OnPointerUp();
+                    eventManager.TriggerEvent(PD2Event.OnPointerUp);
+                    drawTimer = 0;
+                }
+
             }
 
         }

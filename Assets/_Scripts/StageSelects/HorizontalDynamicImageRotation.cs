@@ -1,6 +1,4 @@
 using SingularityGroup.HotReload;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HorizontalDynamicImageRotation : MonoBehaviour
@@ -19,7 +17,6 @@ public class HorizontalDynamicImageRotation : MonoBehaviour
 
         if (!_cameraTransform)
         {
-            Debug.LogWarning("camera=");
             this.enabled = false;
         }
     }

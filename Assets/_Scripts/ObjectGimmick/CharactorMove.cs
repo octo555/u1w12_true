@@ -8,6 +8,7 @@ public class CharactorMove : MonoBehaviour
     [SerializeField] float flightSpeed;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float speedX;
+    [SerializeField] float popPower;
 
     private void Update()
     {
@@ -24,5 +25,10 @@ public class CharactorMove : MonoBehaviour
                 rb.velocity = new Vector2(speedX, rb.velocity.y);
             }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        rb.AddForce(popPower * Vector2.up, ForceMode2D.Impulse);
     }
 }

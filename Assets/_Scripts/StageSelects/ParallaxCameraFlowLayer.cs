@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+// 視差スクロール用のレイヤーに設定するスクリプト
 using UnityEngine;
 
-// 視差スクロール用のレイヤーに設定するスクリプト
 public class ParallaxCameraFlowLayer : MonoBehaviour
 {
     // 追従対象のカメラ
