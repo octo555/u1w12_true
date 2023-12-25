@@ -9,6 +9,8 @@ public class StageSound : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip[] audioClips;
 
+    public int stageNum;
+
     private void Awake()
     {
         if (instance == null)

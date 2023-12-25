@@ -14,7 +14,10 @@ public class StopTime : MonoBehaviour
     {
         if(instance == null)
             instance = this;
+    }
 
+    private void Start()
+    {
         TogglePause();
     }
 
@@ -23,14 +26,13 @@ public class StopTime : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             SEManager.instance.PlaySE(1);
+            isPaused = !isPaused;
             TogglePause();
         }
     }
 
     public void TogglePause()
     {
-        isPaused = !isPaused;
-
         if(isPaused ) pausePanel.SetActive(true);
         else pausePanel.SetActive(false);
 

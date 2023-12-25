@@ -11,6 +11,7 @@ public class Goal : MonoBehaviour
         if(collision.gameObject.tag == tagName)
         {
             SEManager.instance.PlaySE(2);
+            StageManager.instance.GoNextStage();
         }
     }
 }

@@ -96,8 +96,8 @@ public class ButtonEffect : MonoBehaviour
     {
         ButtonManager.instance.ResetAIEffectNumber();
         ButtonManager.instance.ResetCursor();
-        ConnectObjectsInRadiusOnClick.instance.orConnect = false;
-        ConnectObjectsInRadiusOnClick.instance.circle.gameObject.SetActive(false);
+        //ConnectObjectsInRadiusOnClick.instance.orConnect = false;
+        //ConnectObjectsInRadiusOnClick.instance.circle.gameObject.SetActive(false);
         onButtonClick.Invoke();
 
         if (isChangeBGMButton) StageSound.instance.ChangeBGMClip(bgmIndex); //Ç‚Ç¡Ç¬ÇØBGMïœçX
