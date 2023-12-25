@@ -9,6 +9,8 @@ public class CharactorMove : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float speedX;
     [SerializeField] float popPower;
+    [SerializeField] float forceMultiplier;
+    public float maxSpeed = 5f; // ‘¬“x‚ÌãŒÀ
 
     private void Update()
     {
@@ -16,8 +18,15 @@ public class CharactorMove : MonoBehaviour
         {
             if (orUseFlightGravity)
             {
-                rb.velocity = new Vector2(speedX, 0);
-                transform.Translate(Vector2.down * flightSpeed * Time.deltaTime);
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mousePosition.z = 0f; // ƒJƒƒ‰‚Æ‚Ì‹——£‚ðŒÅ’è
+                Vector2 forceDirection = (mousePosition - transform.position).normalized;
+                rb.AddForce(forceDirection * forceMultiplier);
+
+                if (rb.velocity.magnitude > maxSpeed)
+                {
+                    rb.velocity = rb.velocity.normalized * maxSpeed;
+                }
             }
             else
             {
