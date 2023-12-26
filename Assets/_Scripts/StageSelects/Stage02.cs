@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using unityroom.Api;
 
 public class Stage02 : MonoBehaviour
 {
@@ -26,5 +27,6 @@ public class Stage02 : MonoBehaviour
         SuperGod.instance.PlaySE(1);
         result.SetActive(true);
         resultText.text = xxx + "m";
+        UnityroomApiClient.Instance.SendScore(1, xxx, ScoreboardWriteMode.HighScoreDesc);
     }
 }

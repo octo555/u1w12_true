@@ -16,7 +16,7 @@ public class BGMManager : MonoBehaviour
 
         audioSource.time = 13.65f;
 
-        audioSource.DOFade(0.5f, 8f).SetEase(Ease.Linear);
+        audioSource.DOFade(0.4f, 8f).SetEase(Ease.Linear);
     }
 
     public void ChangeStageSelectBGM(int index)

@@ -92,7 +92,7 @@ namespace MG_PhysicsDraw2D
                 {
                     OnPointerUp();
                     eventManager.TriggerEvent(PD2Event.OnPointerUp);
-                    drawTimer = 0;
+                     drawTimer = 0;
                 }
 
             }

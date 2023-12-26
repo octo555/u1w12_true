@@ -22,6 +22,8 @@ public class StageSound : MonoBehaviour
             Destroy(gameObject);
 
         ChangeBGMClip(3);
+
+        stageNum = 0;
     }
 
     public void ChangeBGMClip(int index)

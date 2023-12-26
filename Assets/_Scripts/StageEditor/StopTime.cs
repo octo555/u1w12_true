@@ -32,7 +32,7 @@ public class StopTime : MonoBehaviour
             TogglePause();
         }
 
-        if(isUsedStopTime == false && firstStop && Input.GetMouseButtonUp(0))
+        if(isUsedStopTime == false && firstStop && Input.GetMouseButtonDown(0))
         {
             firstStop = false;
             isPaused = !isPaused;

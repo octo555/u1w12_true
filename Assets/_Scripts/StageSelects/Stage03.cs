@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using unityroom.Api;
 
 public class Stage03 : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Stage03 : MonoBehaviour
 
     private void Update()
     {
-        if(isFalled == false)
+        if(isFalled == false && StopTime.instance.isPaused == false)
             scoreTime += Time.deltaTime;
 
         if (player.transform.gameObject.activeSelf)
@@ -39,5 +40,6 @@ public class Stage03 : MonoBehaviour
         SuperGod.instance.PlaySE(1);
         result.SetActive(true);
         resultText.text = (Mathf.Round(scoreTime * 100) / 100f).ToString() + "sec";
+        UnityroomApiClient.Instance.SendScore(2, (Mathf.Round(scoreTime * 100) / 100f), ScoreboardWriteMode.HighScoreDesc);
     }
 }

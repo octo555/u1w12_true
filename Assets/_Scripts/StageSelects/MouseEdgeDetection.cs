@@ -5,7 +5,7 @@ public class MouseEdgeDetection : MonoBehaviour
 {
     public float edgeThreshold = 20f;
     private bool isCursorOnEdge = false;
-    private bool tien = true;
+    private bool tien = false;
 
     private void Awake()
     {
@@ -23,7 +23,7 @@ public class MouseEdgeDetection : MonoBehaviour
         Vector2 mousePosition = Mouse.current.position.ReadValue();
 
         // 画面端の範囲を指定
-        edgeThreshold = Screen.width / 60f; // 画面端からの距離（ピクセル）
+        edgeThreshold = Screen.width / 20f; // 画面端からの距離（ピクセル）
 
         // 左端または右端にいるかどうかを判定
         bool isOnLeftEdge = mousePosition.x < edgeThreshold;

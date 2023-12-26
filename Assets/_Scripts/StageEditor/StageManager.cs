@@ -11,6 +11,7 @@ public class StageManager : MonoBehaviour
     public static StageManager instance;
     private string lastSceneName;
     [SerializeField] GameObject clearEffect;
+    [SerializeField] GameObject destoybgm;
 
     private void Awake()
     {
@@ -50,6 +51,10 @@ public class StageManager : MonoBehaviour
 
     public void GoSelect()
     {
+        if(destoybgm != null)
+        {
+            Destroy(destoybgm);
+        }
         SuperGod.instance.LoadSelect();
     }
 
