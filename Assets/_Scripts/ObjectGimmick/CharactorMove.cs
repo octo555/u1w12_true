@@ -5,11 +5,10 @@ using UnityEngine;
 public class CharactorMove : MonoBehaviour
 {
     [SerializeField] bool orUseFlightGravity;
-    [SerializeField] float flightSpeed;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float speedX;
+    [SerializeField] float speedY;
     [SerializeField] float popPower;
-    [SerializeField] float forceMultiplier;
     public float maxSpeed = 5f; // 速度の上限
 
     private void Update()
@@ -18,20 +17,20 @@ public class CharactorMove : MonoBehaviour
         {
             if (orUseFlightGravity)
             {
-                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                mousePosition.z = 0f; // カメラとの距離を固定
-                Vector2 forceDirection = (mousePosition - transform.position).normalized;
-                rb.AddForce(forceDirection * forceMultiplier);
+                float xSpeed = speedX;
+                float ySpeed = rb.velocity.y;
 
-                if (rb.velocity.magnitude > maxSpeed)
-                {
-                    rb.velocity = rb.velocity.normalized * maxSpeed;
-                }
+                // Y軸方向のマウスに追従する移動
+                float mouseY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
+                ySpeed = Mathf.MoveTowards(ySpeed, mouseY - transform.position.y, speedY * Time.deltaTime);
+
+                // Rigidbody2Dを使用して物体を移動させる
+                rb.velocity = new Vector2(xSpeed, ySpeed);
             }
             else
             {
                 if(speedX != 0)
-                rb.velocity = new Vector2(speedX, rb.velocity.y);
+                    rb.velocity = new Vector2(speedX, rb.velocity.y);
             }
         }
     }

@@ -2767,6 +2767,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252002676}
   m_CullTransparentMesh: 1
+--- !u!1 &276885192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4316567862724503492, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
+  m_PrefabInstance: {fileID: 656110377}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &282144050
 GameObject:
   m_ObjectHideFlags: 0
@@ -3392,6 +3397,10 @@ PrefabInstance:
       propertyPath: drawingContainer
       value: 
       objectReference: {fileID: 2015538566}
+    - target: {fileID: 1197969372990023224, guid: 7b114fa7214b5c02e997455008978022, type: 3}
+      propertyPath: freezeWhileDrawing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1197969372990023224, guid: 7b114fa7214b5c02e997455008978022, type: 3}
       propertyPath: objectLayer.m_Bits
       value: 8
@@ -5273,7 +5282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cameraTransfrom: {fileID: 712984425}
-  _followFactor: -0.1
+  _followFactor: -0.2
 --- !u!1 &567846670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5955,13 +5964,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3984117158523671715, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
+      propertyPath: shouldFreeze
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3984117158523671722, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
       propertyPath: maxLength
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3984117158523671722, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
       propertyPath: fixedPosition
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3984117158523671722, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
       propertyPath: stopDrawingIfCollide
@@ -5972,6 +5985,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4316567862724503489, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316567862724503489, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: b87d07366769d3fd5912f82caf87dbce, type: 2}
@@ -5980,12 +5997,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4316567862724503489, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316567862724503489, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
       propertyPath: m_UseAutoMass
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4316567862724503489, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316567862724503489, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4316567862724503491, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
       propertyPath: m_RootOrder
@@ -6122,12 +6147,54 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3984117158523671722, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
   m_PrefabInstance: {fileID: 656110377}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 276885192}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7f5fb07235cdd345a4948a8e2e71284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &656110380 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4316567862724503489, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
+  m_PrefabInstance: {fileID: 656110377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!120 &656110382 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 4316567862724503493, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
+  m_PrefabInstance: {fileID: 656110377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &656110386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276885192}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93076c9a2f08f749bbcd1ed402bfc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orUseFlightGravity: 1
+  rb: {fileID: 656110380}
+  speedX: 16
+  speedY: 0
+  popPower: 0
+  maxSpeed: 5
+--- !u!114 &656110387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276885192}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b522085400a495940a2e957b46604225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eraseTime: 10
+  lineRenderer: {fileID: 656110382}
 --- !u!1 &657890165
 GameObject:
   m_ObjectHideFlags: 0
@@ -6964,7 +7031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playrTransform: {fileID: 5818922895879951313}
-  xOffset: 4.5
+  xOffset: 6
   yOffset: 0
   depth: -10
 --- !u!1 &715957179
@@ -13787,7 +13854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0021362305, y: 0.0025024414}
+  m_AnchoredPosition: {x: -0.0021972656, y: 0.0025024414}
   m_SizeDelta: {x: -960.31, y: -540}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1623578518
@@ -18195,12 +18262,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orUseFlightGravity: 1
-  flightSpeed: 0.1
   rb: {fileID: 5818922895879951326}
-  speedX: 0
-  popPower: 0
-  forceMultiplier: 8
-  maxSpeed: 16
+  speedX: 6
+  speedY: 120
+  popPower: 10
+  maxSpeed: 0
 --- !u!114 &5818922895879951325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18228,7 +18294,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

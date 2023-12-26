@@ -9,6 +9,7 @@ namespace MG_PhysicsDraw2D
         Rigidbody2D _rigidbody2;
         Vector2 _velocity;
         float _angularVelocity;
+        public bool shouldFreeze;
 
         void Awake()
         {
@@ -31,9 +32,12 @@ namespace MG_PhysicsDraw2D
 
         public void Freeze()
         {
-            _velocity = _rigidbody2.velocity;
-            _angularVelocity = _rigidbody2.angularVelocity;
-            _rigidbody2.constraints = RigidbodyConstraints2D.FreezeAll;
+            if (shouldFreeze)
+            {
+                _velocity = _rigidbody2.velocity;
+                _angularVelocity = _rigidbody2.angularVelocity;
+                _rigidbody2.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
         }
 
         public void Unfreeze()

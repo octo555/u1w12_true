@@ -201,6 +201,16 @@ namespace MG_PhysicsDraw2D
                     currentDrawing.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 }
 
+                if (currentDrawing.GetComponent<EraseTime>())
+                {
+                    currentDrawing.GetComponent<EraseTime>().enabled = true;
+                }
+
+                if (currentDrawing.GetComponent<CharactorMove>())
+                {
+                    currentDrawing.GetComponent<CharactorMove>().enabled = true;
+                }
+
                 currentDrawing.gameObject.layer = objectLayer;
 
                 currentDrawing = null;
