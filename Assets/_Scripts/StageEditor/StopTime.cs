@@ -9,6 +9,8 @@ public class StopTime : MonoBehaviour
     public bool isPaused = false;
     [SerializeField] Transform objects;
     [SerializeField] GameObject pausePanel;
+    public bool isUsedStopTime;
+    private bool firstStop = true;
 
     private void Awake()
     {
@@ -23,9 +25,16 @@ public class StopTime : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && isUsedStopTime)
         {
             SEManager.instance.PlaySE(1);
+            isPaused = !isPaused;
+            TogglePause();
+        }
+
+        if(isUsedStopTime == false && firstStop && Input.GetMouseButtonUp(0))
+        {
+            firstStop = false;
             isPaused = !isPaused;
             TogglePause();
         }

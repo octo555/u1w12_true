@@ -4726,6 +4726,7 @@ MonoBehaviour:
   isPaused: 1
   objects: {fileID: 2015538566}
   pausePanel: {fileID: 1623578516}
+  isUsedStopTime: 1
 --- !u!114 &431943293
 MonoBehaviour:
   m_ObjectHideFlags: 0

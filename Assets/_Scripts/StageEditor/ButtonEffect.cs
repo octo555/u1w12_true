@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using Unity.VectorGraphics;
 using UnityEngine.Events;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class ButtonEffect : MonoBehaviour
 {
@@ -31,6 +32,9 @@ public class ButtonEffect : MonoBehaviour
     private Vector2 iconSize;
     private Vector2 altIconSize;
     private Color preColor;
+
+    public bool isResetButton;
+    public bool isReturnButton;
 
     void Awake()
     {
@@ -99,6 +103,16 @@ public class ButtonEffect : MonoBehaviour
         //ConnectObjectsInRadiusOnClick.instance.orConnect = false;
         //ConnectObjectsInRadiusOnClick.instance.circle.gameObject.SetActive(false);
         onButtonClick.Invoke();
+
+        if (isResetButton)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        if (isReturnButton)
+        {
+            SuperGod.instance.LoadSelect();
+        }
 
         if (isChangeBGMButton) StageSound.instance.ChangeBGMClip(bgmIndex); //Ç‚Ç¡Ç¬ÇØBGMïœçX
         preColor = svgImage.color;
