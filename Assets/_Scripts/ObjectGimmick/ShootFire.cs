@@ -16,16 +16,21 @@ public class ShootFire : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
-        if (timer > fireInterval)
+        if (StopTime.instance.isPaused == false)
         {
-            Shoot();
-            timer = 0;
+
+            timer += Time.deltaTime;
+            if (timer > fireInterval)
+            {
+                Shoot();
+                timer = 0;
+            }
         }
     }
 
     private void Shoot()
     {
+        SuperGod.instance.PlaySE(3);
         var f = Instantiate(fire,transform.position,Quaternion.identity);
         f.GetComponent<Rigidbody2D>().AddForce(fireSpeed * Vector2.left, ForceMode2D.Impulse);
     }

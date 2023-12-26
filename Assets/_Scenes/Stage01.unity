@@ -232,6 +232,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &4899562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,6 +712,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &59659604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1199,6 +1203,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &136221891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1677,6 +1683,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &176812397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1808,6 +1816,8 @@ MonoBehaviour:
   onButtonClick:
     m_PersistentCalls:
       m_Calls: []
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!61 &181069306
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2368,6 +2378,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!61 &206911294
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2503,6 +2515,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &224268877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3116,6 +3130,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &270249346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3524,6 +3540,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!1 &310380293
 GameObject:
   m_ObjectHideFlags: 0
@@ -4407,6 +4425,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &392575405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5312,6 +5332,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &532185019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6210,6 +6232,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!1 &620079917
 GameObject:
   m_ObjectHideFlags: 0
@@ -6550,7 +6574,12 @@ PrefabInstance:
       propertyPath: m_Parameters.colorGradient.m_NumAlphaKeys
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7408712125285056378, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7408712125285056378, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7960c8f200c5410d3a0f714c759a30ab, type: 3}
 --- !u!114 &656110378 stripped
 MonoBehaviour:
@@ -7342,6 +7371,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!61 &712664935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8176,6 +8207,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &805843686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8641,6 +8674,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!1 &874247034
 GameObject:
   m_ObjectHideFlags: 0
@@ -8818,6 +8853,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &926153375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8957,6 +8994,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &936417678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9908,6 +9947,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &989831881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10950,6 +10991,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &1081584786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11656,6 +11699,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179248201}
   m_CullTransparentMesh: 1
+--- !u!1001 &1188536090
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7411852247545768730, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_Name
+      value: TestSuperGod
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411852247545768731, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411852247545768731, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411852247545768731, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411852247545768731, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411852247545768731, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411852247545768731, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411852247545768731, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411852247545768731, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411852247545768731, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411852247545768731, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411852247545768731, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c5d545ae5143a644fa5e51d8fc584a42, type: 3}
 --- !u!1 &1189902089
 GameObject:
   m_ObjectHideFlags: 0
@@ -11961,6 +12061,8 @@ MonoBehaviour:
   onButtonClick:
     m_PersistentCalls:
       m_Calls: []
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!61 &1202547780
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12125,6 +12227,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!1 &1210227170
 GameObject:
   m_ObjectHideFlags: 0
@@ -12759,6 +12863,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &1279096645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13896,6 +14002,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &1380379136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14035,6 +14143,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &1383687705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14174,6 +14284,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &1386673263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15013,6 +15125,8 @@ MonoBehaviour:
   onButtonClick:
     m_PersistentCalls:
       m_Calls: []
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!61 &1448677308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15160,6 +15274,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &1457005143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15548,6 +15664,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!1 &1560351877
 GameObject:
   m_ObjectHideFlags: 0
@@ -15860,6 +15978,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &1577042466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16482,6 +16602,8 @@ MonoBehaviour:
   onButtonClick:
     m_PersistentCalls:
       m_Calls: []
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!61 &1682101710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16609,6 +16731,8 @@ MonoBehaviour:
   onButtonClick:
     m_PersistentCalls:
       m_Calls: []
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!61 &1694648608
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17060,6 +17184,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!1 &1772612761
 GameObject:
   m_ObjectHideFlags: 0
@@ -17440,6 +17566,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &1812076877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18298,6 +18426,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!61 &1906605715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18433,6 +18563,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &1926291805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18572,6 +18704,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &1976791714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19874,6 +20008,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isResetButton: 0
+  isReturnButton: 0
 --- !u!114 &2062126564
 MonoBehaviour:
   m_ObjectHideFlags: 0

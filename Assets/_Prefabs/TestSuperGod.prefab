@@ -593,6 +593,10 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 3d0b77a88d29bb74f86e50b35c05b557, type: 3}
   - {fileID: 8300000, guid: a51b20ab38aa22a4e92597f3bfb65772, type: 3}
+  - {fileID: 8300000, guid: b219d4520e0cc3040b657ea148938fea, type: 3}
+  - {fileID: 8300000, guid: a3bb0c51992e0624783ca05b0b0c1f8e, type: 3}
+  - {fileID: 8300000, guid: a2058a45c9edbe44e8c98c22476c0310, type: 3}
+  - {fileID: 8300000, guid: 71fdcdc1f5259d243acb5268d25229dd, type: 3}
 --- !u!82 &7411852247545768733
 AudioSource:
   m_ObjectHideFlags: 0

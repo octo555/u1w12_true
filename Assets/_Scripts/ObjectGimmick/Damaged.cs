@@ -10,7 +10,9 @@ public class Damaged : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             ButtonManager.instance.ResetCursor();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            collision.gameObject.SetActive(false);
+            SuperGod.instance.PlaySE(2);
+            Stage03.instance.Fall();
         }
     }
 

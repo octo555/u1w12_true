@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BGMManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class BGMManager : MonoBehaviour
             instance = this;
 
         audioSource.time = 13.65f;
+
+        audioSource.DOFade(0.5f, 8f).SetEase(Ease.Linear);
     }
 
     public void ChangeStageSelectBGM(int index)
