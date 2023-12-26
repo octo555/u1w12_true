@@ -25,7 +25,7 @@ public class CharactorMove : MonoBehaviour
                 ySpeed = Mathf.MoveTowards(ySpeed, mouseY - transform.position.y, speedY * Time.deltaTime);
 
                 // Rigidbody2D‚ðŽg—p‚µ‚Ä•¨‘Ì‚ðˆÚ“®‚³‚¹‚é
-                rb.velocity = new Vector2(xSpeed, ySpeed);
+                rb.velocity = new Vector2(xSpeed, rb.velocity.y);
             }
             else
             {
