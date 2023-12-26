@@ -10,6 +10,7 @@ public class StageManager : MonoBehaviour
     public GameObject[] stages;
     public static StageManager instance;
     private string lastSceneName;
+    [SerializeField] GameObject clearEffect;
 
     private void Awake()
     {
@@ -31,11 +32,25 @@ public class StageManager : MonoBehaviour
     {
         DestoryObjects();
 
-        StageSound.instance.stageNum++;
-        StopTime.instance.isPaused = true;
-        StopTime.instance.TogglePause();
-        foreach (var stage in stages) { stage.SetActive(false); }
-        stages[StageSound.instance.stageNum].SetActive(true);
+        if (StageSound.instance.stageNum == 3)
+        {
+            Invoke("GoSelect", 5f);
+            clearEffect.SetActive(true);
+            SuperGod.instance.PlaySE(1);
+        }
+        else
+        {
+            StageSound.instance.stageNum++;
+            StopTime.instance.isPaused = true;
+            StopTime.instance.TogglePause();
+            foreach (var stage in stages) { stage.SetActive(false); }
+            stages[StageSound.instance.stageNum].SetActive(true);
+        }
+    }
+
+    public void GoSelect()
+    {
+        SuperGod.instance.LoadSelect();
     }
 
     void DestoryObjects()

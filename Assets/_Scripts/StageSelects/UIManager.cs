@@ -10,8 +10,6 @@ public class UIManager : MonoBehaviour
     public float scrollBairitu = 1f;
     public int currentStageNumber = 0;
     [SerializeField] Transform stages;
-    [SerializeField] GameObject nextButton;
-    [SerializeField] GameObject backButton;
     [SerializeField] GameObject[] stageCanvases;
     [SerializeField] Color[] stageBGColors;
     [SerializeField] SpriteRenderer ColorBGSR;
@@ -25,17 +23,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        nextButton.SetActive(true);
-        backButton.SetActive(true);
 
-        if (currentStageNumber == 0)
-        {
-            backButton.SetActive(false);
-        }
-        else if (currentStageNumber == 2)
-        {
-            nextButton.SetActive(false);
-        }
     }
 
     public void ChangeStageEffect()
@@ -47,14 +35,17 @@ public class UIManager : MonoBehaviour
         if (currentStageNumber == 0)
         {
             stagePos = 0;
+            SuperGod.instance.stageNumber = 0;
 
         } else if (currentStageNumber == 1)
         {
             stagePos = -250;
+            SuperGod.instance.stageNumber = 1;
 
         } else if (currentStageNumber == 2)
         {
             stagePos = -500;
+            SuperGod.instance.stageNumber = 2;
         }
 
         //canStageMove = false;

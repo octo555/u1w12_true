@@ -39,6 +39,16 @@ public class StopTime : MonoBehaviour
         ModifyChildRigidbodiesRecursive(objects);
     }
 
+    public void SuperTOgglePause()
+    {
+        SEManager.instance.PlaySE(1);
+        isPaused = !isPaused;
+        if (isPaused) pausePanel.SetActive(true);
+        else pausePanel.SetActive(false);
+
+        ModifyChildRigidbodiesRecursive(objects);
+    }
+
     private void ModifyChildRigidbodiesRecursive(Transform parent)
     {
         // 親オブジェクトからすべての子オブジェクトを取得
