@@ -9,6 +9,7 @@ public class Stage03 : MonoBehaviour
     [SerializeField] GameObject result;
     [SerializeField] TextMeshProUGUI resultText;
     [SerializeField] Transform player;
+    [SerializeField] TextMeshProUGUI scoreText;
     private float scoreTime = 0;
     private bool isFalled = false;
 
@@ -22,8 +23,12 @@ public class Stage03 : MonoBehaviour
 
     private void Update()
     {
-        if(isFalled == false && StopTime.instance.isPaused == false)
+        if (isFalled == false && StopTime.instance.isPaused == false)
+        {
             scoreTime += Time.deltaTime;
+            int scoreTimeInt = (int)scoreTime;
+            scoreText.text = scoreTimeInt + "•b";
+        }
 
         if (player.transform.gameObject.activeSelf)
         {

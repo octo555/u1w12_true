@@ -9,11 +9,18 @@ public class Stage02 : MonoBehaviour
     [SerializeField] GameObject result;
     [SerializeField] TextMeshProUGUI resultText;
     [SerializeField] Transform player;
+    [SerializeField] TextMeshProUGUI scoreText;
     private bool isFalled = false;
     private int xxx = 0;
 
     private void Update()
     {
+        if(isFalled == false)
+        {
+            xxx = (int)player.transform.position.x;
+            scoreText.text = xxx + "m";
+        }
+
         if(isFalled == false && player.transform.position.y < -7f)
         {
             isFalled = true;
