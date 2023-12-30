@@ -32,6 +32,8 @@ public class MouseEdgeDetection : MonoBehaviour
         // カーソルが左端または右端にいるかどうかを確認
         if (isOnLeftEdge || isOnRightEdge)
         {
+            Debug.Log("isOnEdge");
+
             // 閾値を超えたら処理を実行
             if (!isCursorOnEdge && tien == false) //tien == falseは気にしないで
             {

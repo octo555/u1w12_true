@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class LoadManager : MonoBehaviour
 {
-    private void Update()
+    [SerializeField] Image fadeImage;
+
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        fadeImage.DOFade(1f, 0f).OnComplete(() =>
         {
-            SceneManager.LoadScene("Stage01");
-        }
+            fadeImage.DOFade(0f, 5f);
+        });
     }
 }

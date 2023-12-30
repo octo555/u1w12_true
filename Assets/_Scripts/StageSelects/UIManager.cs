@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         if(instance == null) instance = this;
+        currentStageNumber = 0;
     }
 
     private void Update()
