@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject[] stageCanvases;
     [SerializeField] Color[] stageBGColors;
     [SerializeField] SpriteRenderer ColorBGSR;
+    public float xPosOffset; 
     float stagePos;
     public bool canStageMove = true;
 
@@ -34,17 +35,17 @@ public class UIManager : MonoBehaviour
 
         if (currentStageNumber == 0)
         {
-            stagePos = 0;
+            stagePos = 0 + xPosOffset;
             SuperGod.instance.stageNumber = 0;
 
         } else if (currentStageNumber == 1)
         {
-            stagePos = -250;
+            stagePos = -250 + xPosOffset;
             SuperGod.instance.stageNumber = 1;
 
         } else if (currentStageNumber == 2)
         {
-            stagePos = -500;
+            stagePos = -500 + xPosOffset;
             SuperGod.instance.stageNumber = 2;
         }
 

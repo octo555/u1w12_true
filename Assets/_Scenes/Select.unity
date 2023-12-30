@@ -8382,6 +8382,7 @@ MonoBehaviour:
   - {r: 0.16862746, g: 0.21568628, b: 0, a: 1}
   - {r: 0.06666667, g: 0, b: 0.16078432, a: 1}
   ColorBGSR: {fileID: 974345857}
+  xPosOffset: 38
   canStageMove: 1
 --- !u!4 &1440231103
 Transform:
